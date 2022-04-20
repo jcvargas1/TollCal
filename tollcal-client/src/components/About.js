@@ -26,7 +26,7 @@ export default function AboutSection () {
         </Container>
         <Container align = "center">
             <ContactTextTitle style = {{textAlign: 'center', color: "#895cf2"}}>Contact</ContactTextTitle>
-            <AboutText style = {{textAlign: 'center'}}>email@email.com</AboutText>
+            <AboutText style = {{textAlign: 'center'}}>contact@tollcal.com</AboutText>
             <ContactImg height = {"350px"} width = {"350px"} />
         </Container>
         </>

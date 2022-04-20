@@ -24,23 +24,23 @@ export default function App() {
     expiry: timeNow.getTime() + (1000 * 60 * 60 * 24)
   }
   store.set('expiry-time', JSON.stringify(item))
-
+  
  }
 
  // Checks how old the data is in localstorage by checking time stam[]
 function checkDataExpiry() {
-
+  
   const expiryTime = store.get('expiry-time')
   const dateNow = new Date()
 
-  if (!store.has('expiry-time') || !store.has('cache-oceb')) {
+  if (!store.has('expiry-time')) {
     // fetch all data
     setExpiry()
     setData()
     console.log("No cache setting flag to true")
     return null
 
-
+    
   }
 
   const expiryItem = JSON.parse(expiryTime)
@@ -49,6 +49,8 @@ function checkDataExpiry() {
     store(false)
     setExpiry()
     setData()
+    console.log("????")
+
   }
   return null
 }
@@ -57,12 +59,12 @@ function checkDataExpiry() {
 // Function that does API call to DB
 async function setData () {
 
-    const response_oceb = await fetch("https://tollcal.com/api/getschedule_oceb");
-    const response_ocwb = await fetch("https://tollcal.com/api/getschedule_ocwb");
-    const response_rcwb1 = await fetch("https://tollcal.com/api/getschedule_rcwb1");
-    const response_rcwb2 = await fetch("https://tollcal.com/api/getschedule_rcwb2");
-    const response_rceb1 = await fetch("https://tollcal.com/api/getschedule_rceb1");
-    const response_rceb2 = await fetch("https://tollcal.com/api/getschedule_rceb2");
+    const response_oceb = await fetch("http://tollcal.com:5000/getschedule_oceb");
+    const response_ocwb = await fetch("http://localhost:5000/getschedule_ocwb");
+    const response_rcwb1 = await fetch("http://localhost:5000/getschedule_rcwb1");
+    const response_rcwb2 = await fetch("http://localhost:5000/getschedule_rcwb2");
+    const response_rceb1 = await fetch("http://localhost:5000/getschedule_rceb1");
+    const response_rceb2 = await fetch("http://localhost:5000/getschedule_rceb2");
 
     let result_oceb =   await response_oceb.json();
     let result_ocwb =  await response_ocwb.json();
@@ -77,9 +79,12 @@ async function setData () {
     store.set('cache-rcwb2', JSON.stringify(result_rcwb2))
     store.set('cache-rceb1', JSON.stringify(result_rceb1))
     store.set('cache-rceb2', JSON.stringify(result_rceb2))
+
 }
 
 checkDataExpiry();
+
+
 
     return (
       <Router>
@@ -89,6 +94,7 @@ checkDataExpiry();
           <Route path = "/oc" element = {<GridTilesOC />}/>
           <Route path = "/rc" element = {<GridTilesRC />}/>
           <Route path = "/ocrc" element = {<GridTilesOCRC />}/>
+
           <Route path = "/cams" element = {<TrafficCams />}/>
           <Route path = "/about" element = {<AboutSection />}/>
           <Route path = "*" element = {<ErrorPage />}/>

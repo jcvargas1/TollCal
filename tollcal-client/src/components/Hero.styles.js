@@ -12,11 +12,12 @@ export const CarStyled = styled(CarSvg)`
     @media (max-width: 480px) {
                 
      height: 150px;
+     overflow-x: hidden;
     }
     
     @media (min-width: 480px ) and  (max-width: 1024px) {
             height: 300px;
-
+	    overflow-x: hidden;
         }
 `;
 
@@ -28,10 +29,12 @@ export const CarStyled2 = styled(CarSvg2)`
     @media (max-width: 480px) {
                 
      height: 200px;
+     overflow-x: hidden;
     }
     
     @media (min-width: 480px ) and  (max-width: 1024px) {
             height: 350px;
+	    overflow-x: hidden;
 
         }
 `;
@@ -70,18 +73,19 @@ export const HeroH1Box = styled('div')`
                 
         width: 300px;
         margin-bottom: 50px;
-           
+        overflow-x: hidden;
     } 
 
     @media (min-width: 480px ) and  (max-width: 1024px) {
             width: 700px;
             margin-bottom: 50px;
-
+	    overflow-x: hidden;
         }
     
     @media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
     
         width: 700px;
+	overflow-x: hidden;
 
     
     }
@@ -103,13 +107,14 @@ export const HeroH1 = styled('p')`
             
             font-size: 2.2rem;
             margin-right: 0;
-
+	    overflow-x: hidden;
         } 
 
     @media (min-width: 480px ) and  (max-width: 1024px) {
         
         font-size: 2.9rem;
         margin-right: 0;
+	overflow-x: hidden;
     }
 
 
@@ -127,7 +132,7 @@ export const HeroChoiceTxt = styled('p')`
 
     @media (max-width: 480px) {
         font-size: 1.8rem;
-           
+        
     } 
 
 `;
@@ -144,7 +149,8 @@ export const HeroContent = styled('div')`
 
     @media (max-width: 480px) {
         flex-direction: column;   
-        width: 480px;
+        width: 300px;
+	overflow-x: hidden;
          
     } 
 
@@ -169,7 +175,8 @@ export const HeroContent2 = styled('div')`
 
     @media (max-width: 480px) {
         flex-direction: column;   
-        width: 480px;  
+        width: 300px;  
+	overflow-x: hidden;
     } 
 
 `;
@@ -213,7 +220,7 @@ export const ChoiceBtn = styled(Button)`
     @media (max-width: 480px) {
         width: 300px;
         font-size: 1.5rem;
-        
+        overflow-x: hidden;
     }
     
     @media (min-width: 480px ) and  (max-width: 1024px) {
@@ -233,6 +240,7 @@ export const BtnCont = styled('div')`
         flex-direction: column;
         margin-top: 20px;
         width: 480px;  
+	overflow-x: hidden;
         
     } 
 
