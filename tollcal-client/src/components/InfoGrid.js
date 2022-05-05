@@ -59,7 +59,7 @@ export function GridTilesOC() {
                                 </TileContentTitle>
  
                                 <TileContent style = {{color: ' #895cf2'}}>Current Price</TileContent>
-                                <TileContent>{CurrentPrice(JSON.parse(store.get('cache-ocwb')))}</TileContent>
+                                <TileContent>{CurrentPrice(JSON.parse(store.get('cache-oceb')))}</TileContent>
                                 <Divider />
 
                                 <TimeLeft />
