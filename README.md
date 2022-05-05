@@ -15,7 +15,7 @@ When the user first visits the website the page will check if the user has the t
 
 **Services**: AWS (EC2 & RDS), Cloudflare
 
-**Tools/Etc.** : Ubuntu, PostgreSQL, Node.js/npm, Express, Nginx, Certbot, Postman, Responsively, VS Code, Bash, Prerender.io (for SEO optimization)
+**Tools/Etc.** : Ubuntu, PostgreSQL, Node.js/npm, Express, REST, Nginx, Certbot, Postman, Responsively, VS Code, Bash, Prerender.io (for SEO optimization)
 
 
 ## App Diagram
