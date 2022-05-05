@@ -361,7 +361,7 @@ export function CurrentPrice(tollschedule) {
     }, []);
 
     
-
+// Gets current day and time
     function getDayTime(param) {
 
 
@@ -386,7 +386,7 @@ export function CurrentPrice(tollschedule) {
 
 
     }
-
+// Checks if there is a time change and if there is then give the new prices including future price (one hour from current time)
      function checkTimeChange () {
 
         if (tollschedule === null ){
