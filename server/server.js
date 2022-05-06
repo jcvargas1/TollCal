@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(express.json())
 app.use(cors());
 
-// get a time
+// Retrieves all the toll data for the user
 
 app.listen(5000, () => {
     console.log("Server is listening on port 5000");
